@@ -41,4 +41,34 @@ body {
       width: 500px;
       top: 740px;
   }
-  
+  .history-container {
+    position: absolute;
+    z-index: 999;
+    top: 114px;
+    color: white;
+  }
+
+  .dice.one {
+    transform: rotateY(360deg) rotateX(0deg) rotateZ(90deg);
+    animation: none;
+  }
+  .dice.two {
+    transform: rotateY(360deg) rotateX(0deg) rotateZ(90deg);
+    animation: none;
+  }
+  .dice.three {
+    transform: rotateY(90deg) rotateX(0deg) rotateZ(90deg);
+    animation: none;
+  }
+  .dice.four {
+    transform: rotateY(270deg) rotateX(0deg) rotateZ(90deg);
+    animation: none;
+  }
+  .dice.five {
+    transform: rotateY(90deg) rotateX(0deg) rotateZ(180deg);
+    animation: none;
+  }
+  .dice.six {
+    transform: rotateY(180deg) rotateX(0deg) rotateZ(90deg);
+    animation: none;
+  }

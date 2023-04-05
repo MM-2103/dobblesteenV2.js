@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="dice.css">
     <link rel="stylesheet" href="style.css">
-    <script src="app.js"></script>
     <title>Document</title>
 </head>
 
@@ -14,28 +13,55 @@
     <div class="container-history">
         <h1 class="history">History</h1>
         <div class="line"></div>
-        <button class="button-roll" id="roll" onClick="rollTheDice()"></button>Roll</button>
-        <button class="button-middle">Middle</button>
+        <button class="button-roll" id="roll" onClick="rollDice()">Roll</button>
+        <button class="button-middle" onClick="calculateAverage()">Average</button>
     </div>
 
     <div class="vl"></div>
 
     <div class="dice" id="cube">
-
         <div class="side one"></div>
-
         <div class="side two"></div>
-
         <div class="side three"></div>
-
         <div class="side four"></div>
-        
         <div class="side five"></div>
-
         <div class="side six"></div>
-
     </div>
 
+    <div class="history-container">
+        <ul id="history-list"></ul>
+    </div>
+
+    <script>
+        const rollHistory = [];
+
+        const rollDice = () => {
+            const dice = document.getElementById("cube");
+            const sides = ["one", "two", "three", "four", "five", "six"];
+            const randomSide = sides[Math.floor(Math.random() * sides.length)];
+            dice.className = "dice"; // reset the dice class
+            dice.classList.add(randomSide); // add the new class to display the correct side
+
+            rollHistory.push(randomSide); // add the result to the roll history
+
+            const historyList = document.getElementById("history-list");
+            const listItem = document.createElement("li");
+            listItem.textContent = randomSide;
+            historyList.appendChild(listItem);
+        }
+
+        function calculateAverage() {
+            const history = document.getElementById("history-list");
+            const rolls = history.children;
+            let sum = 0;
+            for (let i = 0; i < rolls.length; i++) {
+                sum += Number(rolls[i].innerText);
+            }
+            const average = sum / rolls.length;
+            alert(`Average roll: ${average.toFixed(2)}`);
+        }
+
+    </script>
 
 </body>
 </html>

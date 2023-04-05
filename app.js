@@ -5,7 +5,7 @@ const button = document.getElementById('roll');
 let min = 1;
 let max = 6;
 
-button.onclick = function() {
+button.onclick = function rollTheDice() {
     var xRand = getRandom(max, min);
     var yRand = getRandom(max, min);
 

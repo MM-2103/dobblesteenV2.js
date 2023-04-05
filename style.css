@@ -25,7 +25,7 @@ body {
       height: 50px;
       cursor: pointer;
   }
-  .button-middle {
+  .button-average {
       position: absolute;
       top: 800px;
       left: 400px;
@@ -47,28 +47,36 @@ body {
     top: 114px;
     color: white;
   }
+  #average-list {
+    position: absolute;
+    width: 150px;
+    left: 90px;
+    top: 0px;
+  }
 
-  .dice.one {
+  .dice.\31  {
     transform: rotateY(360deg) rotateX(0deg) rotateZ(90deg);
     animation: none;
   }
-  .dice.two {
+  .dice.\32  {
     transform: rotateY(360deg) rotateX(0deg) rotateZ(90deg);
     animation: none;
   }
-  .dice.three {
+  .dice.\33  {
     transform: rotateY(90deg) rotateX(0deg) rotateZ(90deg);
     animation: none;
   }
-  .dice.four {
+  .dice.\34  {
     transform: rotateY(270deg) rotateX(0deg) rotateZ(90deg);
     animation: none;
   }
-  .dice.five {
+  .dice.\35  {
     transform: rotateY(90deg) rotateX(0deg) rotateZ(180deg);
     animation: none;
   }
-  .dice.six {
+  .dice.\36  {
     transform: rotateY(180deg) rotateX(0deg) rotateZ(90deg);
     animation: none;
   }
+
+  

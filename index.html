@@ -14,7 +14,8 @@
         <h1 class="history">History</h1>
         <div class="line"></div>
         <button class="button-roll" id="roll" onClick="rollDice()">Roll</button>
-        <button class="button-middle" onClick="calculateAverage()">Average</button>
+        <button class="button-average" id="average" onClick="calculateAverage()">Average</button>
+
     </div>
 
     <div class="vl"></div>
@@ -30,6 +31,7 @@
 
     <div class="history-container">
         <ul id="history-list"></ul>
+        <ul id="average-list"></ul>
     </div>
 
     <script>
@@ -37,7 +39,7 @@
 
         const rollDice = () => {
             const dice = document.getElementById("cube");
-            const sides = ["one", "two", "three", "four", "five", "six"];
+            const sides = [1, 2, 3, 4, 5, 6];
             const randomSide = sides[Math.floor(Math.random() * sides.length)];
             dice.className = "dice"; // reset the dice class
             dice.classList.add(randomSide); // add the new class to display the correct side
@@ -58,8 +60,13 @@
                 sum += Number(rolls[i].innerText);
             }
             const average = sum / rolls.length;
-            alert(`Average roll: ${average.toFixed(2)}`);
-        }
+
+            const averageList = document.getElementById("average-list");
+            const averageItem = document.createElement("li");
+            averageItem.textContent = `Average roll: ${average.toFixed(2)}`;
+            averageList.appendChild(averageItem);
+}
+
 
     </script>
 

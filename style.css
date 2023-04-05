@@ -1,0 +1,44 @@
+body {
+    background-color: #000;
+    overflow: hidden;
+  }
+  
+  .vl {
+      border-left: 6px solid white;
+      height: 1500px;
+      width: 1px;
+      position: relative;
+      left: 500px;
+  }
+  .history {
+      color: white;
+      border-bottom: 6px dotted white;
+      width: 500px;
+      text-align: center;
+  }
+  .button-roll {
+      position: absolute;
+      top: 800px;
+      padding: 10px;
+      background-color: white;
+      width: 100px;
+      height: 50px;
+      cursor: pointer;
+  }
+  .button-middle {
+      position: absolute;
+      top: 800px;
+      left: 400px;
+      padding: 10px;
+      background-color: white;
+      width: 100px;
+      height: 50px;
+      cursor: pointer;
+  }
+  .line {
+      border-top: 6px dotted white;
+      position: absolute;
+      width: 500px;
+      top: 740px;
+  }
+  

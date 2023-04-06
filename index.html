@@ -34,41 +34,5 @@
         <ul id="average-list"></ul>
     </div>
 
-    <script>
-        const rollHistory = [];
-
-        const rollDice = () => {
-            const dice = document.getElementById("cube");
-            const sides = [1, 2, 3, 4, 5, 6];
-            const randomSide = sides[Math.floor(Math.random() * sides.length)];
-            dice.className = "dice"; // reset the dice class
-            dice.classList.add(randomSide); // add the new class to display the correct side
-
-            rollHistory.push(randomSide); // add the result to the roll history
-
-            const historyList = document.getElementById("history-list");
-            const listItem = document.createElement("li");
-            listItem.textContent = randomSide;
-            historyList.appendChild(listItem);
-        }
-
-        function calculateAverage() {
-            const history = document.getElementById("history-list");
-            const rolls = history.children;
-            let sum = 0;
-            for (let i = 0; i < rolls.length; i++) {
-                sum += Number(rolls[i].innerText);
-            }
-            const average = sum / rolls.length;
-
-            const averageList = document.getElementById("average-list");
-            const averageItem = document.createElement("li");
-            averageItem.textContent = `Average roll: ${average.toFixed(2)}`;
-            averageList.appendChild(averageItem);
-}
-
-
-    </script>
-
 </body>
 </html>
